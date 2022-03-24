@@ -1,0 +1,55 @@
+.legend {
+    top: 4rem;
+    position: sticky;
+    padding: 1rem;
+    margin-top: 7.8rem;
+    width: 24rem;
+
+}
+
+.legend ul {
+    margin: 0;
+    padding: 0;
+}
+
+.legend ul .item {
+    list-style: none;
+    padding: 1rem;
+    margin: 0 0 1rem;
+}
+
+.legend ul .item:last-child {
+    margin: 0;
+}
+
+.item.p {
+    background: var(--yellow-light);
+}
+
+.item.q {
+    background: var(--orange-light);
+}
+
+.item.lambda {
+    background: var(--blue-light);
+}
+
+.item.n {
+    background: var(--purple-light);
+}
+
+.item.d {
+    background: var(--red-light);
+}
+
+.item.e {
+    background: var(--green-light);
+}
+
+.item.c {
+    background: var(--teal-light);
+}
+
+.item.m {
+    background: var(--grey-8);
+}

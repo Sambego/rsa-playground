@@ -1,0 +1,39 @@
+.container {
+    margin: 2rem 0;
+    border: 1px solid var(--grey-1);
+}
+
+.header {
+    padding: 1rem;
+    margin: 0;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4rem;
+    background: var(--grey-8);
+    border-bottom: 1px solid var(--grey-1);
+}
+
+.content {
+    padding: 1rem;
+}
+
+.content code {
+    font-weight: normal;
+    padding: 0;
+}
+
+.content ul {
+    margin: 0;
+}
+
+.content ul li {
+    margin: 1rem 0;
+}
+
+.container.private .header {
+    background: var(--red-light);
+}
+
+.container.public .header {
+    background: var(--green-light);
+}
