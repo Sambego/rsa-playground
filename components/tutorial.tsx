@@ -112,14 +112,14 @@ const Tutorial = () => {
                             <Legend />
                         </aside>
                         <div className={style.main}>
-                            <h2>Here's how RSA works</h2>
+                            <h2>Here&apos;s how RSA works</h2>
                             <h3><span className={style.chapter}>1</span> Generate the public and private keys</h3>
                             <Secrets p={rsaValues.p} q={rsaValues.q} λ={rsaValues.λ} />
                             <PublicKey p={rsaValues.p} q={rsaValues.q} λ={rsaValues.λ} n={rsaValues.n} e={rsaValues.e} />
                             <PrivateKey p={rsaValues.p} q={rsaValues.q} λ={rsaValues.λ} n={rsaValues.n} d={rsaValues.d} />
                             <ol>
                                 <li>
-                                    We generate 2 random, large prime numbers <strong>p</strong> and <strong>p</strong>. Here, we're using numbers with a length of <strong>{rsa.keySize / 2} bits ({rsa.keySize / 2 / 8 } bytes)</strong>, that will combine to a <strong>key-size of <select onChange={handleUpdateKeySize} className={style.select} value={keySize}>{KEY_SIZES.map(size => <option key={`size_${size}`} value={size} >{size * 8} bits ({size} bytes)</option>)}</select></strong>. These prime numbers <strong>stay secret</strong> and are only used to generate the public and private keys.
+                                    We generate 2 random, large prime numbers <strong>p</strong> and <strong>p</strong>. Here, we&apos;re using numbers with a length of <strong>{rsa.keySize / 2} bits ({rsa.keySize / 2 / 8 } bytes)</strong>, that will combine to a <strong>key-size of <select onChange={handleUpdateKeySize} className={style.select} value={keySize}>{KEY_SIZES.map(size => <option key={`size_${size}`} value={size} >{size * 8} bits ({size} bytes)</option>)}</select></strong>. These prime numbers <strong>stay secret</strong> and are only used to generate the public and private keys.
                                     <ul>
                                         <li>The first prime number  <strong>(p)</strong> is <NumberComponent modifier="p" title="Prime number 1 (p)">{rsaValues?.p}</NumberComponent></li>
                                         <li>The second prime number  <strong>(q)</strong> is <NumberComponent modifier="q" title="Prime number 2 (q)">{rsaValues?.q}</NumberComponent></li>
@@ -133,7 +133,7 @@ const Tutorial = () => {
                                     <Box header="lcm(p -1, q -1) = λ"><strong>lcm(</strong><NumberComponent length={10} end modifier="p" title="Prime number 1 (p)">{rsaValues.p}</NumberComponent><strong> - 1, </strong><NumberComponent length={10} end modifier="q" title="Prime number 2 (q)">{rsaValues.q}</NumberComponent><strong> -1) = </strong><NumberComponent end modifier="lambda" title="Lambda (λ)">{rsaValues.λ}</NumberComponent></Box>
                                 </li>
                                 <li>
-                                    Once we've calculated all secret values, we can generate the values for our public and private keys. Once again, we can use the 2 prime numbers to calcuate the <strong>modulus (n)</strong>.
+                                    Once we&apos;ve calculated all secret values, we can generate the values for our public and private keys. Once again, we can use the 2 prime numbers to calcuate the <strong>modulus (n)</strong>.
                                     <ul>
                                         <li>This value is calculated by multiplying the <strong>first prime number (p)</strong> by the <strong>second prime number (q)</strong>.</li>
                                         <li>The modulus is used for both the <strong>public and private key</strong>.</li>
@@ -177,7 +177,7 @@ const Tutorial = () => {
                             
                             <h3><span className={style.chapter}>3</span> Decrypting a message can be done by leveraging our private key</h3>
                             <ol>
-                                <li>We will have to convert our <strong>cipher (c)</strong> to a number again, if it's transmitted in another format</li>
+                                <li>We will have to convert our <strong>cipher (c)</strong> to a number again, if it&apos;s transmitted in another format</li>
                                 <li>
                                     To decrypt a <strong>cipher (c)</strong> we need to find the <strong>Modular exponentiation of our cipher (c), raised to the power of our private exponent (d), divided by our modulus (n)</strong>.
                                     <Box header={<>c<sup>d</sup> (mod n) = message (m)</>} >
@@ -203,7 +203,7 @@ const Tutorial = () => {
             </section>
             <footer className={style.footer}>
                 <div className={style.container}>
-                    Made with ❤️ by <a target="_blank" href="https://twitter.com/sambego"><strong>@sambego</strong></a> | <a target="_blank" href="https://github.com/sambego/rsa-playground">Source</a>
+                    Made with ❤️ by <a target="_blank" href="https://twitter.com/sambego" rel="noreferrer"><strong>@sambego</strong></a> | <a target="_blank" href="https://github.com/sambego/rsa-playground" rel="noreferrer">Source</a>
                 </div>
             </footer>
         </>
